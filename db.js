@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 // Connection URI
-const uri = "mongodb://127.0.0.1:27017/Bal_Port";
+console.log(process.env.DB_URL);
+const uri = process.env.DB_URL;
 
 async function connectToMongoDB() {
   try {
